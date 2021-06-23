@@ -1,0 +1,20 @@
+setWatch(function(e){
+    var isLong = (e.time-e.lastTime)>0.4;
+    print(isLong.toString());
+    if (isLong) offD23();
+    else onD23();
+  }, BTN, {repeat:true, debounce:50, edge:"falling"});
+
+//long press
+function onD23(){
+  console.log("onD23");
+  digitalWrite(LED,1);
+  //setTimeout(function () { digitalWrite(LED,0); }, 1000);
+}
+
+//short press
+function offD23(){
+  console.log("offD23");
+  digitalWrite(LED,0);
+  //setTimeout(function () { digitalWrite(LED,1); }, 1000);
+}

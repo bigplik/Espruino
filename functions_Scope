@@ -1,0 +1,43 @@
+//Function Scope - zakres
+//variables declared outside functions are global,
+//variables which are declared inside of a function are local,
+
+var scope = "public"; //this scope is global
+
+function checkScope(){
+    var scope = "private"; //this scope is local
+    return scope;
+}
+
+scope; //to get an acess to global scope
+checkScope(); //to acess local scope
+
+//another callback way
+var scope2 = "public";
+var newScope2 = "global variable";
+function checkScope2() {
+    var scope2 = "private";
+    return [scope2, newScope2];
+}
+
+//scope chain
+//like an children don't have acess to the cash, but they can get something bought for the money 
+//from they parents, also they don't have acess to the car, but can get acess to the transport
+//by adults
+//child scope >> parent scope >> global scope
+
+//local scope can't,  look outside it's scope/zakres to find some variable
+//but global scope can't look inside the eg.function to find some variable
+
+//var keyword - if we don't declare variables with var on the front,
+//then those variables are automatically a global variables
+dog = "Oscar";      //global
+var dog = "Oscar";  //local - best practise to use it
+
+var scopeX = "public"; //this scope is global
+function checkScopeX(){
+    scopeX = "private"; //this scope is local
+    return scopeX;
+}
+
+//to solve above - use strict mode!!

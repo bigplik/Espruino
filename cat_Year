@@ -1,0 +1,26 @@
+//cat year conversion age
+
+//my acctual age
+var myAge = 40;
+
+//first years of life
+var earlyYears = 2;
+
+//first two years are accelerated
+earlyYears *= 25;
+
+//count for next years
+var laterYears = myAge - 2;
+
+//next years are slower to grow
+laterYears *= 4;
+
+//full conversion to cat years
+var myAgeInCatYears = earlyYears + laterYears;
+
+//my name
+var myName = "Pawel";
+
+console.log("My name is " + myName + ". I am " + myAge 
++ " years old in human age which is " 
++ myAgeInCatYears + " \n years old in cat years.");

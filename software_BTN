@@ -1,0 +1,11 @@
+var SWBtn = require("https://raw.githubusercontent.com/muet/EspruinoDocs/master/modules/SWButton.js");
+var mySWBtn = new SWBtn(function(k){
+    console.log("BTN1 detected " + k); // log key press pattern
+    if        (k === "S"  ) { LED1.set();
+    } else if (k === "SS" ) { LED1.reset();
+    } else if (k === "L" )  { LED2.set();
+    } else if (k === "LL")  { LED2.reset();
+    } else if (k === "LS")  { LED3.set();
+    } else if (k === "LLS") { LED3.reset();
+    }
+  });

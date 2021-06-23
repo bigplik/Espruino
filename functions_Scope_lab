@@ -1,0 +1,83 @@
+//Function Scope lab
+//scope determined by where variable is defined
+//global or local
+//scope chain
+//"use strict" mode
+
+
+//practice
+function roadTrip(){
+    var gallons = 12;
+    var mpg = 34;             //milles per gallon
+    return gallons * mpg;
+}
+
+roadTrip();
+
+//challenge
+//scope chain
+//local scope >> parent scope >> grandparent scope >> etc.. >> global scope >> error
+//get a local value for a function
+
+//bad practice
+function roadTrip2(){
+    gallons2 = 10;
+    mpg2 = 34;
+    return gallons2 * mpg2;
+}
+
+roadTrip2();
+
+//better practice
+var gallons3 = 11;
+var mpg3 = 25;
+function roadTrip3(){
+    return gallons3 * mpg3;
+}
+
+roadTrip3();
+
+//best practice
+// "use strict" example in the console with the IIFE - Immediately Inovked Function Expressions\
+(function(){
+    //"use strict"; - this cause an error
+    food = "pizza";
+}());
+
+
+
+//challenge
+//build a nested function (zagnieżdżona)
+//child scope >> parent scope >> global scope
+//run the resuld of the child scope
+//1)go from the child scope and grab the value from the parent scope
+//2)then go for the another value from the global scope
+
+var carName = "mercedes";
+
+(function(answer){
+    var sport = function(year,fuel){
+    fuel = "petrol";
+    year = 2001;
+    return "My car is " + carName + " " + answer + " build in " + year + " with " + fuel + " engine";
+    }
+    var year = 2001;
+    return sport();
+}("sport"));
+
+//lesson solution
+
+//global scope
+var height = 10;
+
+function volume(){
+//parent scope
+var width = 10;
+var lenght = 10;
+var volumeOfObject = function(){
+//child of local scope
+return lenght * width * height;
+}    
+//return value of function expression volumeOfObject
+return volumeOfObject();
+}

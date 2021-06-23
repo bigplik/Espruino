@@ -1,0 +1,44 @@
+//Functions Deep Dive Lab
+//
+//challenge
+//call the knockKnock function
+function knockKnock() {
+    return "Who\'s there?";
+}
+
+knockKnock();
+
+//challenge 2
+//turn knockKnock into an anonymous function within a function expressions
+//call the function
+var knockKnock2 = function(){
+    return "Who\'s here again?";
+};
+
+knockKnock2();
+
+//IIFE - immediately invoked function expressions
+//practice
+function dogWalker(person, dog){
+    return person + " is taking " + dog + " for a walk ";
+}
+
+dogWalker("Paul", "Charlie");
+
+//challenge
+//create an immediately invoked function expressions
+//store the IIFE within a variable and call it
+var myCar = (function(carName, carModel){
+    return "Hi, my car is a " + carName + " " + carModel;
+}("mercedes", "c200"));
+
+myCar;
+
+//or
+(function(carName, carModel){
+    //uncomment below line to get show in console down message
+    //console.log("Hi, my car is a " + carName + " " + carModel);
+    return "Hi, my car is a " + carName + " " + carModel;
+}("Dacia", "Logan"));
+
+

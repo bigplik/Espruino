@@ -1,0 +1,20 @@
+//array methods review
+//pop() push() shift() unshift()
+
+var shoppingList = ["apples", "cucambers", "onion", "pizza", "oranges", "carrot"];
+
+//challenge
+//add "crackers" at the front of the array and "grapes" at the end of the array
+
+shoppingList.unshift("crackers");  //add on the front
+shoppingList.push("grapes");       //add at the end
+
+shoppingList.push("siraca", "popcorn");
+shoppingList.unshift("lemonade", "orange juice");
+
+
+//challenge 2
+//remove first and last item from the array
+
+shoppingList.shift();    //remove from the front
+shoppingList.pop();      //remove from the end

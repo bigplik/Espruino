@@ -1,0 +1,16 @@
+//conversion of kelvin temp through celcius to fahrenheit temp
+
+//kelvin temp value
+var kelvinTemp = 301;
+
+//conversion to celsius
+var celsiusTemp = kelvinTemp - 273.15;
+
+//conversion to fahrenheit
+var fahrenheitTemp = celsiusTemp *(9/5)+32;
+
+//round down
+fahrenheitTemp = Math.floor(fahrenheitTemp);
+
+//print string sentense with fahrenheit degrees temperature information
+console.log("The temperature is " + fahrenheitTemp + " degrees Fahrenheit");

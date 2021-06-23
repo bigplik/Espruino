@@ -1,0 +1,18 @@
+//new
+//DRY rule - Don't repeat yourself !!!!!!
+
+//function declaration
+function morningGreeting(){
+    return "Good morning, it is time to get up";
+}
+
+morningGreeting();
+
+//paramters function declaration
+function greetPresident(firstName, lastName){
+    return "Hello " + firstName + " " + lastName + "!";
+
+}
+
+greetPresident("Abraham", "Lincoln");
+greetPresident("George", "Washington");

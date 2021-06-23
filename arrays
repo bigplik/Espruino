@@ -1,0 +1,15 @@
+//
+var baseBallTeams = ["Dogers", "Giants", "Mets", "Yankees", "Astros"];
+
+//add a value to the end of the array
+baseBallTeams[5] = "Tigers";
+
+//change "Giants" into a different team
+baseBallTeams[1] = "Wolfs";
+
+console.log(baseBallTeams[0]);
+//acess the fifth value and save it into myFavoriteTeam variable, store and save
+//acess the lenght of the array
+baseBallTeams.lenght;
+var myFavoriteTeam = baseBallTeams[5];
+

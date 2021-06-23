@@ -1,0 +1,41 @@
+//Functions Expressions
+//anonymous functions
+//iffes
+
+//function expression
+function greetingOne(){  //greetingOne - function declaration, which is always named
+    return "Good morning, neighbor!";
+}
+
+
+//anonymous function
+var morningGreeting = function(){ //morningGreeting is a variable, but function() - isn't named
+    return "Good Morning, neighbor!";
+};
+//where is
+// var morningGreeting - access to function
+// function() - anonymous function
+morningGreeting();
+
+
+//iife - IMMEDIATELY INVOKED FUNCTION EXPRESSIONS [IIFE]
+var greetFullName = (function(firstName, lastName){
+    return "Hello, " + firstName + " " + lastName + "!";
+}());
+//this function is wrapped in extra parenthesis (nawias zwykły)
+//and extra () at the and of the IIFE function
+//callback of this function may by inside or outside of this function
+//eg.2
+
+//function expression
+var greeting1 = function(){
+    return "Hello, people!";
+};
+//this function above need a parenthesis for callback
+greeting1();
+
+var greeting2 = (function(){
+    return "Hello, everyone!";
+}());
+
+greeting2; //this function just need a variable callback

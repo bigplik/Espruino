@@ -1,0 +1,34 @@
+//conversion function of kelvin temp through celcius to fahrenheit temp
+var celsiusTemp;
+var fahrenheitTemp;
+var kelvinTemp;
+
+function kelvin(kelvinTemp){
+  celsiusTemp = kelvinTemp - 273.15;
+  fahrenheitTemp = celsiusTemp *(9/5)+32;
+  
+  //round down fahrenheit
+  fahrenheitTemp = Math.floor(fahrenheitTemp);  
+  console.log("The temperature is " + fahrenheitTemp 
+  + " degrees Fahrenheit");
+  
+  //found down celsius
+  celsiusTemp = Math.floor(celsiusTemp);
+  console.log("\n and " + celsiusTemp + " degrees celsius.");
+}
+
+function fahrenheit(fahrenheitTemp){
+  celsiusTemp = (fahrenheitTemp - 32) / (9/5);
+  kelvinTemp = Math.floor(celsiusTemp + 273.15);
+    
+  console.log("celsius " + celsiusTemp
+  + " and kelvin " + kelvinTemp);
+}
+
+function celsius(celsiusTemp){
+  fahrenheitTemp = celsiusTemp * (9/5)+32;
+  kelvinTemp = Math.floor(celsiusTemp + 273.15);
+  
+  console.log("Fahrenheit " + fahrenheitTemp + " and Kelvin "
+  + kelvinTemp);
+}

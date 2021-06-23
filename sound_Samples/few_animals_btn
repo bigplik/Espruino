@@ -1,0 +1,87 @@
+/*in here few animals voice can be played
+(rooster, pig, cow, horse)
+they are wrapped in corresponding functions
+*/
+pinMode(BTN,"input_pulldown");
+
+function kogut(){
+var f = E.openFile("Rooster.raw","r");
+
+var w = new Waveform(2048, {doubleBuffer:true});
+// load first bits of sound file
+w.buffer.set(f.read(w.buffer.length));
+w.buffer2.set(f.read(w.buffer.length));
+var fileBuf = f.read(w.buffer.length);
+// when one buffer finishes playing, load the next one
+w.on("buffer", function(buf) {
+  buf.set(fileBuf);
+  fileBuf = f.read(buf.length);
+  if (fileBuf===undefined) w.stop(); // end of file
+});
+// start output
+analogWrite(A0, 0.5, {freq:40000});
+w.startOutput(A0,11025,{repeat:true});
+}
+
+
+function swinia(){
+var f = E.openFile("Pig.raw","r");
+
+var w = new Waveform(2048, {doubleBuffer:true});
+// load first bits of sound file
+w.buffer.set(f.read(w.buffer.length));
+w.buffer2.set(f.read(w.buffer.length));
+var fileBuf = f.read(w.buffer.length);
+// when one buffer finishes playing, load the next one
+w.on("buffer", function(buf) {
+  buf.set(fileBuf);
+  fileBuf = f.read(buf.length);
+  if (fileBuf===undefined) w.stop(); // end of file
+});
+// start output
+analogWrite(A0, 0.5, {freq:40000});
+w.startOutput(A0,11025,{repeat:true});
+}
+
+function krowa(){
+var f = E.openFile("CowLH2.raw","r");
+
+var w = new Waveform(2048, {doubleBuffer:true});
+// load first bits of sound file
+w.buffer.set(f.read(w.buffer.length));
+w.buffer2.set(f.read(w.buffer.length));
+var fileBuf = f.read(w.buffer.length);
+// when one buffer finishes playing, load the next one
+w.on("buffer", function(buf) {
+  buf.set(fileBuf);
+  fileBuf = f.read(buf.length);
+  if (fileBuf===undefined) w.stop(); // end of file
+});
+// start output
+analogWrite(A0, 0.5, {freq:40000});
+w.startOutput(A0,11025,{repeat:true});
+}
+
+function kon(){
+var f = E.openFile("Horse-Angry.raw","r");
+
+var w = new Waveform(2048, {doubleBuffer:true});
+// load first bits of sound file
+w.buffer.set(f.read(w.buffer.length));
+w.buffer2.set(f.read(w.buffer.length));
+var fileBuf = f.read(w.buffer.length);
+// when one buffer finishes playing, load the next one
+w.on("buffer", function(buf) {
+  buf.set(fileBuf);
+  fileBuf = f.read(buf.length);
+  if (fileBuf===undefined) w.stop(); // end of file
+});
+// start output
+analogWrite(A0, 0.5, {freq:40000});
+w.startOutput(A0,11025,{repeat:true});
+}
+
+
+setWatch(function(e) {
+  if(digitalRead(BTN)==1)kogut();
+},BTN, {repeat: true, edge: 'rising', debounce:150});

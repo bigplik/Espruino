@@ -1,0 +1,17 @@
+var n = 0;
+
+function showRandom() {
+  // get a random number between 1 and 6
+  n = 1 + Math.floor(Math.random()*6);
+  console.log(n);
+}
+
+setWatch(function(e){
+    showRandom();
+    if(n === 1)LED.set();
+    else if(n === 2) LED.reset();
+    else if(n === 3) LED2.set();
+    else if(n === 4) LED2.reset();
+    else if(n === 5) LED3.set();
+    else if(n === 6) LED3.reset(); 
+  }, BTN, {repeat:true, debounce:50, edge:"falling"});

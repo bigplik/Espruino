@@ -1,0 +1,22 @@
+var counter = 0;
+
+
+setWatch(function(e){
+    var isShort = (e.time-e.lastTime)<0.4;
+    if (isShort){
+      counter++;
+      console.log("is short" + counter);
+      if(counter == 1)LED.set();
+      else if(counter == 2)LED.reset();
+      else if(counter == 3)LED2.set();
+      else if(counter == 4)LED2.reset();
+      else if(counter == 5)LED3.set();
+      else if(counter == 6)LED3.reset();
+      setTimeout(function () {
+      counter = 0;
+      }, 1000);
+    }
+    else{ print("is long");
+          counter = 0;   }
+  }, BTN, {repeat:true, debounce:50, edge:"falling"});
+

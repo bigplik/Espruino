@@ -1,0 +1,18 @@
+var files = require("fs").readdirSync();
+for (var i in files)
+  console.log("Found file "+files[i]);
+
+/*
+Found file .fseventsd
+Found file hello.txt
+Found file hello2.txt
+Found file data.csv
+Found file sound.raw
+Found file Kogut.raw
+Found file Sheep.raw
+Found file Horse.raw
+Found file horseLH.raw
+Found file ._sound.raw
+Found file CowLH.raw
+Found file CowLH2.raw
+*/

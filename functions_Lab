@@ -1,0 +1,42 @@
+//functions lab - functions have:
+//keyword function 
+//function or anonymous
+//code block
+//called or invoked (callback)
+//parameters and arguments
+
+
+function goodMorningNeighbor() {
+    return "Good Morning, neighbor!";
+}
+
+goodMorningNeighbor();
+
+function goodEveningNeighbor() {
+    return "Good Evening, neighbor, thanks for everything!";
+}
+goodEveningNeighbor();
+
+function goodMorningJim() {
+    return "Good Moring, Jim!";
+}
+
+function goodEveningKinga(chooseSomething){
+    return "Good Evening, Kinga, thanks for " + chooseSomething;
+}
+
+goodMorningJim();
+goodEveningKinga("tea");
+
+//solution from the lesson
+function goodMorning(name){
+    return "Good Morning, " + name + "!";
+}
+
+goodMorningNeighbor("Mel");
+
+function goodEveningNeighbor2(name, task){
+    return "Good Evening, " + name + " thanks for " + task + "!";
+}
+
+goodEveningNeighbor2("Donna", "your company");
